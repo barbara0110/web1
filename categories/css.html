@@ -1,49 +1,26 @@
-<!DOCTYPE html>
-<html lang=es dir=LTR>
-    <!-- Cabecera oculta del documento web -->
-    <head>
-        <!-- Juego de caracteres de casi todos los idiomas humanos (incluidos ñ, tildes ...) -->
-        <meta charset=utf-8 />
-        <!-- Escala inicial y renderizado _responsive_ por el ancho del dispositivo -->
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <!-- Compatibilidad con Microsoft Explorer -->
-        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <!-- Indéxame y sígueme -->
-        <meta name="robots" content="Index, Follow" />
-        <!-- Breve descripción del sitio que se verá en los resultados de búsqueda -->
-        <meta name="description" content="Web del curso IFCD0110 Confección y Publicación de páginas web. Aprende HTML, CSS y Javascript con nosotros. Somos los mejores!"/>
-        <!-- Ruta a las hojas de estilos -->
-        <link rel="stylesheet" type="text/css" href="../css/basicos.css" />
-        <!-- Ruta al favicon -->
-        <link rel="shortcut icon" href="../images/favicon.ico" type="image/vnd.microsoft.icon"/>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXX-n"></script>
-        <script>
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
+<!D<!DOCTYPE html>
+<html lang="es" dir="LTR">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <meta name="description" content="Sitio web de prueba elaborado en el curso de Confección y Publicación de Páginas Web (IFCD0110). Aprende HTML, CSS y Javascript con nosotros. Somos los mejores!"/>
+    <link rel="stylesheet" type="text/css" href="../css/basicos.css"/>
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/vnd.microsoft.icon"/>
+    <title>IFCD0110  | Contacto</title>
+</head>
 
-            gtag('config', 'UA-XXXX-n');
-        </script>
-
-           
-        <!-- Título de la pestaña -->
-        <title>IFCD0110 | CSS</title>
-    </head>
-
-    <!-- Cuerpo visible del documento web -->
-    <body>
-        <header>
-            <a href="../index.html" title="Página principal">
+<body>
+    <header>
+        <a href="../index.html" title="Inicio">
                 <figure>
-                    <img src="../images/img_html_200.png" alt="logo html"/>
+                    <img src="../images/img_html_200.png" alt="el logo del sitio es el logo de HTML, CSS y Javascript"/>
                 </figure>
-                <h1>CSS</h1>
-            </a>
-            <p class="pechado">Curso de Confección Publicación de Páginas Web</p>
-        </header>
-        <!-- Menú de navegación principal del sitio -->
-        <nav>
-            <h2 class="pechado">Menú principal</h2>
+                <h1>El lenguaje de marcas en HTML5</h1>
+        </a>
+    </header>
+
+    <nav>
+        <h2>Menú principal</h2>
             <ul>
                 <li>
                     <a href="../index.html">Inicio</a>
@@ -72,40 +49,73 @@
                     <a href="../pages/contacto.html">Contacto</a>
                 </li>
             </ul>
-        </nav>
+        
+    </nav>
 
-        <!-- Contenido principal de la página web -->
-        <main>
-            <section>
-                <h2>CSS</h2>
-                <article>
-                    <h3>Qué es CSS</h3>
-                        <p>
-                            CSS es el mecanismo que permite separar los contenidos definidos mediante XHTML y el aspecto que deben presentar esos contenidos
-                        </p>
-                </article>
-                <article>
-                    <h3>Título del artículo</h3>
-                    <p>Párrafo 1</p>
-                    <p>Párrafo 2</p>
-                </article>
-                <!-- Pie de la sección -->
-                <footer></footer>
-            </section>
-            <aside>
-                <h2>Título de la barra lateral</h2>
-                <nav>
-                  
-                </nav>
-            </aside>
-        </main>
-        <!-- Pie de la página web -->
-        <footer>
-            <h2>Información de contacto</h2>
-            <p>En construcción</p>
-        </footer>
-    </body>
+    <main>
+        <section>
+            <h2>Marcado de texto</h2>
+            <article>
+                <h3 id="em">Énfasis</h3>
+                <p>
+                    <strong>El elemento em</strong>
+                </p>
+                <p>
+                    Cuando queremos dar énfasis al lenguaje hablado, acentuamos ciertas palabras y así alteramos sutilmente el significado de lo que decimos. <br/>
+                    De manera similar, en el lenguaje escrito ponemos palabras en cursiva para destacarlas. Por ejemplo, las dos siguientes frases tienen diferente significado:
+                </p>
+                <p>
+                    Me alegro de que no llegues tarde.
+                </p>
+                <p>
+                    Me <em>alegro</em> de que no llegues <em>tarde</em>.
+                </p>
+                <p>
+                    La primera frase suena aliviada porque la persona no llega tarde. Por el contrario, la segunda suena sarcástica y un tanto pasivo-agresiva, expresa molestia porque la persona ha llegado algo tarde.
+                </p>
+                <p>
+                    En HTML usamos el elemento <em> («emphasis») para marcar estos casos. El documento logra entonces transmitir una lectura más interesante y además así lo reconocen los lectores de pantalla, que lo expresan con un diferente tono de voz.
+                </p>
+            </article>
+
+            <article>
+                <h3 id="strong">Importancia</h3>
+                <p>
+                    <strong>El elemento Strong</strong>
+                </p>
+                <p>
+                    Para enfatizar palabras importantes al hablar solemos acentuarlas, y al escribir lo hacemos en estilo negrita. Por ejemplo:
+                </p>
+                <p>
+                    Cuento contigo. <strong>¡No llegues tarde!</strong>
+                </p>
+                <p>
+                    En HTML usamos el elemento strong (importancia fuerte) para marcar tales expresiones. El documento resulta entonces más útil, y de nuevo los lectores de pantalla reconocen estos elementos y el tono de voz cambia a uno más fuerte.
+                </p>
+            </article>
+        </section>
+
+        <aside>
+            <h2>Menú lateral</h2>
+            <nav>
+                <h3>Menú de navegación</h3>
+                    <ul>
+                        <li>
+                            <a href="#em">Énfasis</a>
+                            <a href="#strong">Importancia</a>
+                        </li>
+                    </ul>
+            </nav>
+        </aside>
+    </main>
+    
+    <footer>
+        <h2>Pie de página</h2>
+        <p>En construcción</p>
+    </footer>
+
+
+</body>
 </html>
-
 
 
