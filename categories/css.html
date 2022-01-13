@@ -1,372 +1,216 @@
 <!DOCTYPE html>
-<html lang="es" dir="LTR">
+<html lang="es" dir="ltr">
 <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1"/>
-    <meta name="description" content="Sitio web de prueba elaborado en el curso de Confección y Publicación de Páginas Web (IFCD0110). Aprende HTML, CSS y Javascript con nosotros. Somos los mejores!"/>
-    <link rel="stylesheet" type="text/css" href="../css/basicos.css"/>
-    <link rel="shortcut icon" href="../images/favicon.ico" type="image/vnd.microsoft.icon"/>
-    <title>IFCD0110  | CSS</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="">
+    <title>Práctica estilos CSS</title>
+    <style>
+        
+        /* Selector universal=* */
+        
+        * {
+            margin: 0;
+            padding: 0;
+            background-color:pink;
+        }
+        
+        * {
+            color: red;
+        }
+        
+        /* Esto anula y sustituye lo anterior */
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: black;
+            
+        }
+        
+        li, a, p {
+            color: dimgray;
+        }
+        
+         
+        header h1 {     
+      /* La propiedad height establece el alto */
+            height: 50px;
+      /*  La propiedad padding es el relleno */
+            padding: 8px;
+      /*  La propiedad background color es el color de fondo */
+            background-color: gray;
+        }
+        
+        nav {
+      /* Esto es un borde liso en color rojo */
+            border: 1px solid red;
+        }
+        
+        nav h2 {
+            /* esto hace que el texto no se visualice, lo oculta */
+            display: none;
+        }
+        
+        article {
+      /* Aqui la propiedad width establece el ancho de todos los articulos */
+            width: 40%;
+      /* Aqui la propiedad padding establece el relleno de todos los articulos */
+            padding: 10px;
+      /* Aqui la propiedad margin establece el margen en las 4 direcciones de todos los articulos */
+            margin: 3%;
+      /* Aqui la propiedad border establece el borde de todos los articulos */
+            border: 1px solid black;
+              
+        }
+        
+        /* Establece el ancho al 100% para los articulos herederos de un articulo heredero de una sección */
+        section article article {
+            width: 100%;
+    
+        }
+        
+        /* Esto anula y sustituye la orden anterior de width 40% */
+        section article {
+            width: 100%;
+            /* esto anula el margin del 3% indicado antes a izq y drch */
+            margin right: 0;
+            margin left: 0;
+            /* Podemos poner lo mismo así: */
+            /* Aplica 3% a arriba y abajo y 0 a derecha e izquierda */
+            margin: 3%, 0;
+            
+            
+            
+        }
+        
+        article article p {
+            color: lime;
+        }
+        
+        article, article p, article h2 {
+           /* Establece el color de fondo para:  */
+           /* Todos los articulos */
+           /* Todos los parrafos herederos de un articulo */
+           /* Todos los h2 herederos de un articulo */
+            background-color: white;
+        }
+        
+       
+        
+        
+        footer {
+            /* Esto establece el alto del footer en 80px */
+            height: 80px;
+            /* line-height establece el alto de la linea de texto */
+            /* Al ponerle el mismo valor que el height centra el texto en medio de la caja verticalmente */
+            line-height: 80px;
+            padding: 10px;
+            /* Establece alineación del texto al centro */
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        
+       
+        
+        
+        
+        
+    </style>
+   
 </head>
 
 <body>
-    <header>
-        <a href="../index.html" title="Inicio">
-                <figure>
-                    <img src="../images/img_html_200.png" alt="el logo del sitio es el logo de HTML, CSS y Javascript"/>
-                </figure>
-                <h1>El lenguaje de marcas en HTML5</h1>
-        </a>
-    </header>
+   <header>
+       <h1>Mis primeros estilos</h1>
+   </header>
+   <nav>
+      <h2>Menú principal</h2>
+       <ul>
+            <li>
+                <a href="../index.html">Inicio</a>
+            </li>
 
-    <nav>
-        <h2>Menú principal</h2>
-            <ul>
-                <li>
-                    <a href="../index.html">Inicio</a>
-                </li>
-                <li>Categorias
-                    <ul>
-                        <li>
-                            <a href="html5.html">HTML5</a>
-                        </li>
-                        <li>
-                            <a href="css.html">CSS</a>
-                        </li>
-                        <li>
-                            <a href="js.html">Javascript</a>
-                        </li>
-                        <li>
-                            <a href="loremipsum.html">Lorem Ipsum</a>
-                        </li>
-                        <li>
-                            <a href="practica.html">Práctica</a>
-                        </li>
-                        <li>
-                            <a href="uf1302-avaliacion.html">Exámen UF1302</a>
-                        </li>
-                        <li>
-                            <a href="estilos.html">Estilos</a>
-                        </li>
-                        
-                    </ul>
-                    
-                </li>
-                <li>
-                    <a href="../pages/nosotros.html">Nosotros</a>
-                </li>
-                <li>
-                    <a href="../pages/contacto.html">Contacto</a>
-                </li>
-            </ul>
-        
-    </nav>
-
-    <main>
-        <section>
-            <h2>Marcado de texto</h2>
-            <article>
-                <h3 id="enfasis">Énfasis</h3>
-                <p>
-                    <strong>El elemento em</strong>
-                </p>
-                <p>
-                    Cuando queremos dar énfasis al lenguaje hablado, acentuamos ciertas palabras y así alteramos sutilmente el significado de lo que decimos. <br/>
-                    De manera similar, en el lenguaje escrito ponemos palabras en cursiva para destacarlas. Por ejemplo, las dos siguientes frases tienen diferente significado:
-                </p>
-                <p>
-                    Me alegro de que no llegues tarde.
-                </p>
-                <p>
-                    Me <em>alegro</em> de que no llegues <em>tarde</em>.
-                </p>
-                <p>
-                    La primera frase suena aliviada porque la persona no llega tarde. Por el contrario, la segunda suena sarcástica y un tanto pasivo-agresiva, expresa molestia porque la persona ha llegado algo tarde.
-                </p>
-                <p>
-                    En HTML usamos el elemento "em" («emphasis») para marcar estos casos. El documento logra entonces transmitir una lectura más interesante y además así lo reconocen los lectores de pantalla, que lo expresan con un diferente tono de voz.
-                </p>
-            </article>
-
-            <article>
-                <h3 id="importancia">Importancia</h3>
-                <p>
-                    <strong>El elemento Strong</strong>
-                </p>
-                <p>
-                    Para enfatizar palabras importantes al hablar solemos acentuarlas, y al escribir lo hacemos en estilo negrita. Por ejemplo:
-                </p>
-                <p>
-                    Cuento contigo. <strong>¡No llegues tarde!</strong>
-                </p>
-                <p>
-                    En HTML usamos el elemento strong (importancia fuerte) para marcar tales expresiones. El documento resulta entonces más útil, y de nuevo los lectores de pantalla reconocen estos elementos y el tono de voz cambia a uno más fuerte.
-                </p>
-            </article>
-
-            <article>
-                <h3 id="citas">Citas en HTML5</h3>
-                <blockquote cite="https://es.wikipedia.org/wiki/House_M._D.">
-                    <p>
-                        House M. D. ha gozado de la preferencia de la crítica y del público desde su lanzamiento, convirtiéndose en uno de los programas televisivos más vistos en los Estados Unidos y en todo el mundo.Ha recibido diversos reconocimientos y nominaciones, entre los que destacan un premio Peabody, dos Globos de Oro y tres premios Emmy. Fue la serie más vista en 2008, con un promedio de ochenta y dos millones de personas en sesenta y seis países. La sexta temporada comenzó con un episodio de dos horas, el 21 de septiembre de 2009 en Estados Unidos y terminó a principios de junio de 2010.
-                    </p>
-                    
-                </blockquote>
-
-                <a href="https://es.wikipedia.org/wiki/House_M._D."><cite>House M.D.</cite> de Wikipedia</a>
-
-                <p>
-                    El articulo <cite>House M.D.</cite> de la Wikipedia no menciona la cita <q>No es mi intención verte la cara de idiota, pero no puedo andar todo el tiempo con los ojos cerrados.</q>
-                    Tampoco menciona <q>Si se pudiera razonar con la gente religiosa, no habría gente religiosa</q>
-                </p>
-
-                <br>
-
-                <blockquote cite="https://jorgesanchez.net/manuales/html/texto-y-parrafo-html.html">
-                    <p>
-                        En HTML5 existen tres formas de marcar citas:
-
-                    <ul>
-                        <li>
-                            <strong>q.</strong> Usada para indicar citas cortas incluidas en un párrafo con otro tipo de texto. Indica un texto que procede de otra fuente. Remarca una cita, con la connotación de “texto entrecomillado”. De hecho, los navegadores, por defecto, entrecomillan su contenido.
-                        </li>
-
-                        <li>
-                            <strong>cite.</strong> Este elemento era el que originalmente se usaba para citas literales. Actualmente se recomienda su uso para indicar títulos de trabajos y el nombre de sus autores. Eso incluye títulos de libros, memorias, ensayos, poemas, obras musicales, sitios web, entradas de blog o foros, comentarios, tweets, discursos, etc. Es decir cualquier trabajo creativo.
-                        </li>
-
-                        <li>
-                            <strong>blockquote.</strong> Este es el único elemento de marcado de citas que trabaja a nivel de párrafo. Es decir, indicado párrafos completos que son citas procedente de fuentes externas al documento. Se le puede indicar (al igual que se hace con el elemento q) el atributo cite para indicar un enlace a la fuente de la cita.
-                        </li>
-                        
-                    </ul>
-
-                     <p>
-                        El stándar actual indica que la etiqueta <strong>cite</strong> está destinada únicamente a contener el título del recurso que se cita y no él nombre del autor.
-                    </p>
-
-                 </blockquote>
-
-                    <a href="https://jorgesanchez.net/manuales/html/texto-y-parrafo-html.html">
-                        <cite>Manual de Jorge Sánchez</cite>
-                    </a>
-
-                <p>
-                    Jorge Sánchez indica además en su manual<q>Visualmente los navegadores muestran el texto blockquote añadiendo una sangría a la derecha y a la izquierda. Ignoran, visualmente, el uso del atributo cite, pero otras herramientas sí usan este contenido.</q>
-                </p>
-                    
+            <li>
+                <a href="../pages/nosotros.html">Nosotros</a>
+            </li>
+            <li>
+             <a href="../pages/contacto.html">Contacto</a>
+            </li>
+        </ul>
+   </nav>
+   <main>
+      <section></section>
+      
+      <section>
+          <article>
+               <h2>Lorem 1</h2>
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Vel quam elementum pulvinar etiam non quam lacus. Nunc consequat interdum varius sit amet mattis vulputate enim. Imperdiet proin fermentum leo vel orci porta. Aenean et tortor at risus viverra adipiscing. Et leo duis ut diam. 
+               </p>
+               <p>
+                   Sagittis eu volutpat odio facilisis. Iaculis nunc sed augue lacus. Gravida cum sociis natoque penatibus et magnis dis. Velit egestas dui id ornare arcu odio ut sem. Nunc mi ipsum faucibus vitae aliquet. Et egestas quis ipsum suspendisse ultrices gravida. Ut placerat orci nulla pellentesque dignissim. Ac feugiat sed lectus vestibulum mattis ullamcorper. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. 
+               </p>
+       </article>
+       <article>
+               <h2>Lorem 2</h2>
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Vel quam elementum pulvinar etiam non quam lacus. Nunc consequat interdum varius sit amet mattis vulputate enim. Imperdiet proin fermentum leo vel orci porta. Aenean et tortor at risus viverra adipiscing. Et leo duis ut diam. 
+               </p>
+               <p>
+                   Sagittis eu volutpat odio facilisis. Iaculis nunc sed augue lacus. Gravida cum sociis natoque penatibus et magnis dis. Velit egestas dui id ornare arcu odio ut sem. Nunc mi ipsum faucibus vitae aliquet. Et egestas quis ipsum suspendisse ultrices gravida. Ut placerat orci nulla pellentesque dignissim. Ac feugiat sed lectus vestibulum mattis ullamcorper. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. 
+               </p>
+       </article>
+       <article>
+               <h2>Lorem 3</h2>
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Vel quam elementum pulvinar etiam non quam lacus. Nunc consequat interdum varius sit amet mattis vulputate enim. Imperdiet proin fermentum leo vel orci porta. Aenean et tortor at risus viverra adipiscing. Et leo duis ut diam. 
+               </p>
+               <p>
+                   Sagittis eu volutpat odio facilisis. Iaculis nunc sed augue lacus. Gravida cum sociis natoque penatibus et magnis dis. Velit egestas dui id ornare arcu odio ut sem. Nunc mi ipsum faucibus vitae aliquet. Et egestas quis ipsum suspendisse ultrices gravida. Ut placerat orci nulla pellentesque dignissim. Ac feugiat sed lectus vestibulum mattis ullamcorper. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. 
+               </p>
+       </article>
+       <article>
+               <h2>Lorem 4</h2>
+               <p>
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Vel quam elementum pulvinar etiam non quam lacus. Nunc consequat interdum varius sit amet mattis vulputate enim. Imperdiet proin fermentum leo vel orci porta. Aenean et tortor at risus viverra adipiscing. Et leo duis ut diam. 
+               </p>
+               <p>
+                   Sagittis eu volutpat odio facilisis. Iaculis nunc sed augue lacus. Gravida cum sociis natoque penatibus et magnis dis. Velit egestas dui id ornare arcu odio ut sem. Nunc mi ipsum faucibus vitae aliquet. Et egestas quis ipsum suspendisse ultrices gravida. Ut placerat orci nulla pellentesque dignissim. Ac feugiat sed lectus vestibulum mattis ullamcorper. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. 
+               </p>
+       </article>
+       
+      </section>
+      
+      <section>
+          <h2>Artículos anidados</h2>
+          <article>
+              <h3>Anidado Lorem 1</h3>
+              <p>
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Vel quam elementum pulvinar etiam non quam lacus. Nunc consequat interdum varius sit amet mattis vulputate enim. Imperdiet proin fermentum leo vel orci porta. Aenean et tortor at risus viverra adipiscing. Et leo duis ut diam. 
+               </p>
+               <p>
+                   Sagittis eu volutpat odio facilisis. Iaculis nunc sed augue lacus. Gravida cum sociis natoque penatibus et magnis dis. Velit egestas dui id ornare arcu odio ut sem. Nunc mi ipsum faucibus vitae aliquet. Et egestas quis ipsum suspendisse ultrices gravida. Ut placerat orci nulla pellentesque dignissim. Ac feugiat sed lectus vestibulum mattis ullamcorper. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. 
+               </p>
                
-
-            </article>
-
-            <article>
-                <h3 id="tablas">Tablas</h3>
-
-                <table>
-                    <caption>Cuidades del mundo</caption>
-                    <thead>
-                        <tr>
-                            <th>País</th>
-                            <th>Capital</th>
-                            <th>Otras cuidades</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>España</td>
-                            <td>Madrid</td>
-                            <td>Barcelona, Zaragoza, Sevilla, Valencia, Bilbao</td>
-                        </tr>
-                        <tr>
-                            <td>Francia</td>
-                            <td>París</td>
-                            <td>Lyon, Marsella, Nantes, Touluse</td>
-                        </tr>
-                        <tr>
-                            <td>Portugal</td>
-                            <td>Lisboa</td>
-                            <td>Oporto, Coimbra, Braga,Aveiro</td>
-                        </tr>
-
-                    </tbody>
-                </table>
-                
-          
-                <br>
-           
-                <table>
-                   <caption>Superhéroes</caption>
-                   <thead>
-                        <tr>
-                           <th>Ranking</th>
-                           <th>Superhéroe</th>
-                           <th>Superpoderes</th>
-                           <th>Debilidades</th>
-                        </tr>
-                   </thead>
-
-                   <tbody>
-                    <tr>
-                       <td>#1</td>
-                       <td>Superman</td>
-                       <td>7</td>
-                       <td>1</td>
-                    </tr>
-                    <tr>
-                       <td>#2</td>
-                       <td>Lobezno</td>
-                       <td>4</td>
-                       <td>1</td>
-                        
-                    </tr>
-                    <tr>
-                       <td>#3</td>
-                       <td>Thor</td>
-                       <td>3</td>
-                       <td>0</td>
-                        
-                    </tr>
-                    <tr>
-                       <td>#4</td>
-                       <td>Mística</td>
-                       <td>3</td>
-                       <td>1</td>
-                        
-                    </tr>
-                    <tr>
-                       <td>#5</td>
-                       <td>Flash</td>
-                       <td>3</td>
-                       <td>2</td>
-                        
-                    </tr>
-                    <tr>
-                       <td>#6</td>
-                       <td>Black Bolt</td>
-                       <td>2</td>
-                       <td>0</td>
-                        
-                    </tr>
-                    <tr>
-                       <td>#7</td>
-                       <td>Silver Surfer</td>
-                       <td>2</td>
-                       <td>0</td>
-                        
-                    </tr>
-                    <tr>
-                       <td>#8</td>
-                       <td>Spiderman</td>
-                       <td>2</td>
-                       <td>2</td>
-                        
-                    </tr>
-                    <tr>
-                       <td>#9</td>
-                       <td>Iron Man</td>
-                       <td>1</td>
-                       <td>1</td>
-                        
-                    </tr>
-                    
-                    <tr>
-                       <td>#10</td>
-                       <td>Lagarto</td>
-                       <td>1</td>
-                       <td>1</td>
-                        
-                    </tr>
-                    <tr>
-                       <td>#11</td>
-                       <td>Hombre de Hielo</td>
-                       <td>1</td>
-                       <td>1</td>
-                        
-                    </tr>
-                    <tr>
-                       <td>#12</td>
-                       <td>Batman</td>
-                       <td>0</td>
-                       <td>2</td>
-                        
-                    </tr>
-                   </tbody>
-                </table>
-
-        </article>
-
-        <article>
-            <h3 id="imagenes_y_video">Imágenes y vídeo</h3>
-
-                <figure>
-                        <img src="https://images.pexels.com/photos/34600/pexels-photo.jpg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="imagen de una pantalla con código html"/>
-                        <figcaption>Pantalla de ordenador con código HTML</figcaption>
-                </figure>
-
-                <br>
-
-                <video src="https://www.w3schools.com/html/mov_bbb.mp4" controls>
-                    <p>
-                        Su navegador no es compatible con vídeo HTML5. Puede ver este vídeo en una pestaña nueva haciendo click en este enlace:
-                        <a href="https://www.w3schools.com/html/mov_bbb.mp4" title="Ver vídeo en una pestaña nueva" target="_blank">Vídeo de conejo y mariposa</a>
-                    </p>
-                    
-                </video>
-
-                <br>
-
-                <video controls poster="../images/poster.png">
-                    <source src="../video/rabbit320.mp4" type="video/mp4">
-                    <source src="../video/rabbit320.webm" type="video/webm">
-
-                    <p>
-                        Su navegador no es compatible con vídeo HTML5. Puede ver este vídeo en una pestaña nueva haciendo click en este enlace:
-                        <a href="https://www.w3schools.com/html/mov_bbb.mp4" title="Ver vídeo en una pestaña nueva" target="_blank">Vídeo de conejo y mariposa</a>
-                    </p>
-                    
-                </video>
-
-
-
-
-
-
-        </article>
-
-        </section>
-
-        <aside>
-            <h2>Menú lateral</h2>
-            <nav>
-                <h3>Menú de navegación</h3>
-                    <ul>
-                        <li>
-                            <a href="#enfasis">Énfasis</a>
-                        </li>
-                        <li>
-                            <a href="#importancia">Importancia</a>
-                        </li>
-                        <li>
-                            <a href="#citas">Citas</a>
-                        </li>
-                        <li>
-                            <a href="#tablas">Tablas</a>
-                        </li>
-                        <li>
-                            <a href="#imagenes_y_video">Imágenes y vídeo</a>
-                        </li>
-                    </ul>
-            </nav>
-        </aside>
-    </main>
+               <article>
+                   <h4>Anidado anidado Lorem 2</h4>
+                   <p>
+                   Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Hac habitasse platea dictumst vestibulum rhoncus est pellentesque elit. Adipiscing bibendum est ultricies integer quis auctor elit sed vulputate. Vel quam elementum pulvinar etiam non quam lacus. Nunc consequat interdum varius sit amet mattis vulputate enim. Imperdiet proin fermentum leo vel orci porta. Aenean et tortor at risus viverra adipiscing. Et leo duis ut diam. 
+               </p>
+               <p>
+                   Sagittis eu volutpat odio facilisis. Iaculis nunc sed augue lacus. Gravida cum sociis natoque penatibus et magnis dis. Velit egestas dui id ornare arcu odio ut sem. Nunc mi ipsum faucibus vitae aliquet. Et egestas quis ipsum suspendisse ultrices gravida. Ut placerat orci nulla pellentesque dignissim. Ac feugiat sed lectus vestibulum mattis ullamcorper. Iaculis urna id volutpat lacus laoreet non curabitur gravida arcu. 
+               </p>
+               </article>
+          </article>
+      </section>
+      
+      <section></section>
+       
+   </main>
+   <footer>
+       <h2>Pie de página</h2>
+   </footer>
     
-    <footer>
-        <h2>Pie de página</h2>
-        <p>En construcción</p>
-    </footer>
-
-
 </body>
 </html>
 
