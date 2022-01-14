@@ -1,0 +1,110 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&display=swap');
+        /* Selector universal=* */
+        
+        * {
+            margin: 0;
+            padding: 0;
+           
+        }
+        
+        * {
+            color: red;
+        }
+        
+        /* Esto anula y sustituye lo anterior */
+        
+        h1, h2, h3, h4, h5, h6 {
+            color: black;
+            font-family: 'Libre Baskerville', serif;
+            
+        }
+        
+        li, a, p {
+            color: dimgray;
+        }
+        
+         
+        header h1 {     
+      /* La propiedad height establece el alto */
+            height: 50px;
+      /*  La propiedad padding es el relleno */
+            padding: 8px;
+      /*  La propiedad background color es el color de fondo */
+            background-color: gray;
+        }
+        
+        nav {
+      /* Esto es un borde liso en color rojo */
+            border: 1px solid red;
+        }
+        
+        nav h2 {
+            /* esto hace que el texto no se visualice, lo oculta */
+            display: none;
+        }
+        
+        article {
+      /* Aqui la propiedad width establece el ancho de todos los articulos */
+            width: 40%;
+      /* Aqui la propiedad padding establece el relleno de todos los articulos */
+            padding: 10px;
+      /* Aqui la propiedad margin establece el margen en las 4 direcciones de todos los articulos */
+            margin: 3%;
+      /* Aqui la propiedad border establece el borde de todos los articulos */
+            border: 1px solid black;
+              
+        }
+        
+        /* Establece el ancho al 100% para los articulos herederos de un articulo heredero de una sección */
+        section article article {
+            width: 100%;
+    
+        }
+        
+        /* Esto anula y sustituye la orden anterior de width 40% */
+        section article {
+            width: 100%;
+            /* esto anula el margin del 3% indicado antes a izq y drch */
+            margin right: 0;
+            margin left: 0;
+            /* Podemos poner lo mismo así: */
+            /* Aplica 3% a arriba y abajo y 0 a derecha e izquierda */
+            margin: 3%, 0;
+            
+            
+            
+        }
+        
+        article article p {
+            color: lime;
+        }
+        
+        article, article p, article h2 {
+           /* Establece el color de fondo para:  */
+           /* Todos los articulos */
+           /* Todos los parrafos herederos de un articulo */
+           /* Todos los h2 herederos de un articulo */
+            background-color: white;
+        }
+        
+       
+        
+        
+        footer {
+            /* Esto establece el alto del footer en 80px */
+            height: 80px;
+            /* line-height establece el alto de la linea de texto */
+            /* Al ponerle el mismo valor que el height centra el texto en medio de la caja verticalmente */
+            line-height: 80px;
+            padding: 10px;
+            /* Establece alineación del texto al centro */
+            text-align: center;
+            background-color: black;
+            color: white;
+        }
+        
+       
+        
+        
+        
