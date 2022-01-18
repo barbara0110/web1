@@ -1,0 +1,74 @@
+#titulo {
+    color: teal;
+}
+
+#subtitulo {
+    color: blue;
+}
+
+article.ej2 span.especial {
+    color: purple;
+}
+
+article.ej2 p strong {
+    color: red;
+}
+
+article.ej2 p em {
+    color: blue;
+}
+
+article.ej2 a {
+    color: red;
+}
+
+article.ej2 span.destacado {
+    color: orange;
+}
+
+
+article.ej2 table caption {
+    color: blue;
+}
+
+article.ej2 table {
+    border-collapse:collapse
+}
+
+article.ej2 td, article.ej2 th {
+    border: 1px solid black;  
+    
+}
+
+
+article.ej2 .especial{
+    color: orange;
+}
+
+article.ej2 td {
+    color: green;
+}
+
+article.ej2 table strong {
+    color: orange;
+}
+
+article.ej2 tfoot th {
+    color: red;
+}
+
+article.ej2 tbody th {
+    color: orange;
+}
+
+#adicional {
+    color:olive;
+}
+
+#especial {
+    color: fuchsia;
+}
+
+article.ej2 div a {
+    color: green;
+}
