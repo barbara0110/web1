@@ -72,3 +72,13 @@ article.ej2 tbody th {
 article.ej2 div a {
     color: green;
 }
+
+
+/* ----------------------------------------------------------------- */
+
+
+ul.galeria li{
+    
+    list-style: none;
+    display: inline-block;
+}
